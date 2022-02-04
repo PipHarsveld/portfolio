@@ -7,7 +7,7 @@
   --lettertype-koppen: 'Fira Code', 'Courier New', Courier, monospace;
   --lettertype-paragraaf: 'Roboto', Arial, Helvetica, sans-serif;
 
-  --lettertype-kleur: #ffffff;
+  --lettertype-kleur: #D4D4D4;
   --lettertype-kleur2: #111111;
   --achtergrondkleur1: #1e1e1e;
   --achtergrondkleur2: #252526;
@@ -39,13 +39,19 @@ h1, h2, h3, p, a, li{
   color: var(--lettertype-kleur);
 }
 
-
 h1, h2, h3, a{
   font-family: var(--lettertype-koppen);
 }
 
+h2{
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 p, li{
   font-family: var(--lettertype-paragraaf);
+  line-height: 1.3rem;
 }
 
 ul{
@@ -70,25 +76,36 @@ main > section{
 /************/
 /* Menubalk */
 header > nav{
-  position: sticky;
+  position: fixed;
+  width: 100vw;
   z-index: 2;
   top: 0;
-  box-shadow: 0 .06rem .25rem rgb(57 63 72 / 30%);
+  /* box-shadow: 0 .06rem .25rem rgb(57 63 72 / 30%); */
   background-color: var(--achtergrondkleur1);
 }
-     
+
 header nav ul{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
-  padding: .3rem 10%;
+  padding: 1.5rem 10%;
+}
+
+header nav ul li{
+  margin: 0 2rem;
 }
 
 header nav ul li:first-of-type{
-  margin-right: auto ;
+  margin-right: auto;
+  margin-left: 0;
 }
+
+header nav ul li:last-of-type{
+  margin-right: 0;
+}
+
 
 /***************/
 /* Introductie */
@@ -104,16 +121,17 @@ header > section > section{
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  width: 50%;
 }
 
 header section section h1{
   margin-bottom: 1rem;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 
 header section section p{
-  max-width: 20rem;
+  max-width: 27rem;
 }
 
 header section section nav{
@@ -122,8 +140,8 @@ header section section nav{
 
 header section section nav a:first-of-type{
   display: inline-block;
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: 1rem 2rem;
+  margin: 2rem 1.5rem 2rem 0;
 
   background-color: var(--gele-kleur);
   color: var(--lettertype-kleur2);
@@ -132,16 +150,20 @@ header section section nav a:first-of-type{
 
 header > section > section nav a:nth-of-type(2){
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 2rem 0;
   
   border: .2rem solid var(--gele-kleur);
   border-radius: 5rem;
 }
 
+header > section aside{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header > section aside img{
-  width: 15rem;
-  align-self: flex-end;
+  width: 13rem;
 }
 
 
@@ -155,6 +177,20 @@ main > section:first-of-type{
   display: flex;
 }
 
+/* DOTTED GRID
+main > section:first-of-type > div{
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+  z-index: 1000;
+  background-image: radial-gradient(var(--lettertype-kleur), 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+} */
+
+
 main > section:first-of-type aside{
   position: relative;
 }
@@ -162,24 +198,53 @@ main > section:first-of-type aside{
 main section:first-of-type aside > div{
   background: transparent;
   border: 0.2rem solid var(--groene-kleur);
-  width: 15rem;
-  height: 22.5rem;
+  width: 17rem;
+  height: 25.5rem;
   position: absolute;
   top: -1rem;
   left: -1rem;
 }
 
 main section:first-of-type aside > img{
-  width: 15rem;
+  width: 17rem;
   margin-right: 10rem;
+}
+
+main section:first-of-type section h2{
+  color: var(--groene-kleur);
+}
+
+main section:first-of-type section p{
+  margin-bottom: .5rem;
+}
+
+main section:first-of-type section h3{
+  color: var(--groene-kleur);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: .7rem;
 }
 
 main section:first-of-type section ul{
   display: flex;
+  justify-content: space-between;
+}
+
+main section:first-of-type section ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 4rem;
+}
+
+main section:first-of-type section ul li p{
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 main section:first-of-type section ul li img{
-  width: 3rem;
+  width: 2.2rem;
 }
 
 
@@ -189,6 +254,10 @@ main section:first-of-type section ul li img{
 /*************/
 main section:nth-of-type(2){
   padding: 0 10%;
+}
+
+main section:nth-of-type(2) h2{
+  color: var(--blauwe-kleur);
 }
 
 main section:nth-of-type(2) ul li article img{
@@ -240,6 +309,19 @@ main section:nth-of-type(2) ul li:last-of-type article{
 /***********/
 main section:nth-of-type(3){
   padding: 0 10%;
+}
+
+main section:nth-of-type(3) h2{
+  color: var(--roze-kleur);
+}
+
+main section:nth-of-type(3) p{
+  margin-bottom: 1rem;
+}
+
+main section:nth-of-type(3) ul li{
+  display: flex;
+  align-items: center;
 }
 
 main section:nth-of-type(3) ul li img{
