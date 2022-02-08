@@ -66,6 +66,7 @@ a{
 
 
 
+
 /**********/
 /* HEADER */
 /**********/
@@ -101,6 +102,22 @@ header nav ul li:first-of-type{
 
 header nav ul li:last-of-type{
   margin-right: 0;
+}
+
+header nav ul li:first-of-type a:hover, header nav ul li:first-of-type a:focus{
+  color: var(--gele-kleur);
+}
+
+header nav ul li:nth-of-type(2) a:hover, header nav ul li:nth-of-type(2) a:focus{
+  color: var(--groene-kleur);
+}
+
+header nav ul li:nth-of-type(3) a:hover, header nav ul li:nth-of-type(3) a:focus{
+  color: var(--blauwe-kleur);
+}
+
+header nav ul li:last-of-type a:hover, header nav ul li:last-of-type a:focus{
+  color: var(--roze-kleur);
 }
 
 
@@ -149,7 +166,6 @@ header > section > section nav a:nth-of-type(2){
   display: inline-block;
   padding: 1rem 2rem;
   margin: 2rem 0;
-  
   border: .2rem solid var(--gele-kleur);
   border-radius: 5rem;
 }
@@ -162,6 +178,7 @@ header > section aside{
 header > section aside img{
   width: 13rem;
 }
+
 
 
 
@@ -246,6 +263,8 @@ main section:first-of-type section ul li img{
 
 
 
+
+
 /*************/
 /* PROJECTEN */
 /*************/
@@ -265,18 +284,6 @@ main section:nth-of-type(2) p{
   margin-bottom: 2rem;
 }
 
-main section:nth-of-type(2) ul li article img{
-  height: 10rem;
-}
-
-main section:nth-of-type(2) ul li:first-of-type article img{
-  height: 15rem;
-}
-
-main section:nth-of-type(2) ul li:last-of-type article img{
-  height: 15rem;
-}
-
 main section:nth-of-type(2) ul{
   display: grid;
   grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
@@ -293,10 +300,6 @@ main section:nth-of-type(2) ul li:first-of-type{
   grid-row: 1/3;
 }
 
-main section:nth-of-type(2) ul li:first-of-type article{
-  display: flex;
-}
-
 main section:nth-of-type(2) ul li:nth-of-type(4){
   grid-column-start: 2;
 }
@@ -306,10 +309,36 @@ main section:nth-of-type(2) ul li:last-of-type{
   grid-column-start: 4;
 }
 
+main section:nth-of-type(2) ul li:first-of-type article{
+  display: flex;
+}
+
 main section:nth-of-type(2) ul li:last-of-type article{
   display: flex;
   align-self: center;
 }
+
+main section:nth-of-type(2) ul li article img{
+  height: 10rem;
+}
+
+main section:nth-of-type(2) ul li:first-of-type article img, main section:nth-of-type(2) ul li:last-of-type article img{
+  height: 15rem;
+}
+
+/* .hoverstateImage{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  color: white;
+}
+
+main section:nth-of-type(2) ul li article img:hover{
+  opacity: 0.3;
+} */
 
 main> div{
   width: 0;
@@ -320,6 +349,10 @@ main> div{
   position: relative;
   background-color: var(--achtergrondkleur1);
 }
+
+
+
+
 
 /***********/
 /* CONTACT */
