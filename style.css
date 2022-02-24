@@ -11,6 +11,7 @@
   --lettertype-kleur2: #111111;
   --achtergrondkleur1: #1e1e1e;
   --achtergrondkleur2: #252526;
+  --achtergrondkleur3: rgba(255, 255, 255, 0.61);
   --grijze-kleur: #676767;
 
   --gele-kleur: #f2bc1b;
@@ -63,7 +64,15 @@ a{
   text-decoration: none;
 }
 
+.dottedgrid{
+  width: 5.1rem;
+  height: 3.5rem;
+  position: absolute;
 
+  background-image: radial-gradient(var(--lettertype-kleur), .12rem, transparent 0);
+  background-size: 1.5rem 1.5rem;
+  background-position: -2rem -2rem;
+}
 
 
 
@@ -179,6 +188,13 @@ header > section aside img{
   width: 13rem;
 }
 
+.spiraal{
+  position: absolute;
+  top: 30rem;
+  right: 10rem;
+  display: block;
+}
+
 
 
 
@@ -191,19 +207,9 @@ main > section:first-of-type{
   display: flex;
 }
 
-/* DOTTED GRID
-main > section:first-of-type > div{
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  top: 6rem;
-  left: 6rem;
-  z-index: 1000;
-  background-image: radial-gradient(var(--lettertype-kleur), 1px, transparent 0);
-  background-size: 40px 40px;
-  background-position: -19px -19px;
-} */
-
+main > section:first-of-type > div{ /* dotted grid */
+  left: .5rem;
+} 
 
 main > section:first-of-type aside{
   position: relative;
@@ -272,6 +278,10 @@ main section:nth-of-type(2){
   padding: 5rem 10% 7rem 10%;
 }
 
+main > section:nth-of-type(2) > div{ /* dotted grid */
+  right: .5rem;
+}
+
 main section:nth-of-type(2) h2{
   color: var(--blauwe-kleur);
   text-align: center;
@@ -287,7 +297,7 @@ main section:nth-of-type(2) p{
 main section:nth-of-type(2) ul{
   display: grid;
   grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
-  grid-row-gap: 3rem;
+  grid-row-gap: .5rem;
 }
 
 main section:nth-of-type(2) ul li{
@@ -309,20 +319,27 @@ main section:nth-of-type(2) ul li:last-of-type{
   grid-column-start: 4;
 }
 
-main section:nth-of-type(2) ul li:first-of-type article{
+
+/* main section:nth-of-type(2) ul li{
+  width: 20rem;
+} */
+
+main section:nth-of-type(2) ul li:first-of-type{
   display: flex;
 }
 
-main section:nth-of-type(2) ul li:last-of-type article{
+main section:nth-of-type(2) ul li:last-of-type{
   display: flex;
   align-self: center;
 }
 
-main section:nth-of-type(2) ul li article img{
-  height: 10rem;
+main section:nth-of-type(2) ul li  img{
+  height: 11.5rem;
+  padding: 1rem;
+  border: .2rem solid var(--blauwe-kleur);
 }
 
-main section:nth-of-type(2) ul li:first-of-type article img, main section:nth-of-type(2) ul li:last-of-type article img{
+main section:nth-of-type(2) ul li:first-of-type  img, main section:nth-of-type(2) ul li:last-of-type img{
   height: 15rem;
 }
 
@@ -363,6 +380,10 @@ main section:nth-of-type(3){
   background-color: var(--achtergrondkleur1);
 }
 
+main > section:nth-of-type(3) > div{ /* dotted grid */
+  left: .5rem;
+}
+
 main section:nth-of-type(3) h2{
   color: var(--roze-kleur);
 }
@@ -374,6 +395,7 @@ main section:nth-of-type(3) p{
 
 main section:nth-of-type(3) ul li{
   margin-bottom: 1.5rem;
+  width: fit-content;
 }
 
 main section:nth-of-type(3) ul li a{
