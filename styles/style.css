@@ -87,7 +87,6 @@ header > nav{
   width: 100vw;
   z-index: 2;
   top: 0;
-  /* box-shadow: 0 .06rem .25rem rgb(57 63 72 / 30%); */
   background-color: var(--achtergrondkleur1);
 }
 
@@ -319,11 +318,6 @@ main section:nth-of-type(2) ul li:last-of-type{
   grid-column-start: 4;
 }
 
-
-/* main section:nth-of-type(2) ul li{
-  width: 20rem;
-} */
-
 main section:nth-of-type(2) ul li:first-of-type{
   display: flex;
 }
@@ -333,7 +327,7 @@ main section:nth-of-type(2) ul li:last-of-type{
   align-self: center;
 }
 
-main section:nth-of-type(2) ul li  img{
+main section:nth-of-type(2) ul li img{
   height: 11.5rem;
   padding: 1rem;
   border: .2rem solid var(--blauwe-kleur);
@@ -343,19 +337,22 @@ main section:nth-of-type(2) ul li:first-of-type  img, main section:nth-of-type(2
   height: 15rem;
 }
 
-/* .hoverstateImage{
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  color: white;
+main > section:nth-of-type(2) > ul li > article{
+  background-color: white;
+  display: none;
+  position: absolute; /* Sit on top of the page content */
+  width: 70rem; /* Full width (cover the whole page) */
+  height: 25rem; /* Full height (cover the whole page) */
+  margin-left: auto;
+  margin-right: auto;
+  top: 98.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 5rem;
+  z-index: 1;
 }
 
-main section:nth-of-type(2) ul li article img:hover{
-  opacity: 0.3;
-} */
 
 main> div{
   width: 0;
@@ -418,3 +415,9 @@ main section:nth-of-type(3) ul li img{
 footer{
   padding: 0 10%;
 }
+
+.toonOverlay{
+  display: block !important;
+}
+
+
