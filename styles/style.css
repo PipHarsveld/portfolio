@@ -14,7 +14,7 @@
   --achtergrondkleur3: rgba(255, 255, 255, 0.61);
   --grijze-kleur: #676767;
 
-  --gele-kleur: #f2bc1b;
+  --gele-kleur: #1bd9f2;
   --groene-kleur: #8ace24;
   --blauwe-kleur: #3d79f2;
   --roze-kleur: #f22e8a;
@@ -187,13 +187,6 @@ header > section aside img{
   width: 13rem;
 }
 
-.spiraal{
-  position: absolute;
-  top: 30rem;
-  right: 10rem;
-  display: block;
-}
-
 
 
 
@@ -202,11 +195,13 @@ header > section aside img{
 /* OVER MIJ */
 /************/
 main > section:first-of-type{
-  padding: 8.5rem 10% 5rem 10%;
+  padding: 12% 10% 12% 10%;
   display: flex;
+  height: 100vh;
 }
 
-main > section:first-of-type > div{ /* dotted grid */
+/* dotted grid */
+main > section:first-of-type > div{ 
   left: .5rem;
 } 
 
@@ -274,10 +269,12 @@ main section:first-of-type section ul li img{
 /* PROJECTEN */
 /*************/
 main section:nth-of-type(2){
-  padding: 5rem 10% 7rem 10%;
+  padding: 7% 10% 7% 10%;
+  height: 100vh;
 }
 
-main > section:nth-of-type(2) > div{ /* dotted grid */
+/* dotted grid */
+main > section:nth-of-type(2) > div{ 
   right: .5rem;
 }
 
@@ -337,23 +334,53 @@ main section:nth-of-type(2) ul li:first-of-type  img, main section:nth-of-type(2
   height: 15rem;
 }
 
+/* Projecten overlay */
 main > section:nth-of-type(2) > ul li > article{
-  background-color: white;
+  background-color: var(--achtergrondkleur1);
   display: none;
-  position: absolute; /* Sit on top of the page content */
-  width: 70rem; /* Full width (cover the whole page) */
-  height: 25rem; /* Full height (cover the whole page) */
+  position: absolute;
+  width: 70rem;
+  height: 25rem;
   margin-left: auto;
   margin-right: auto;
-  top: 98.5rem;
+  top: 235vh;
   left: 0;
   right: 0;
-  text-align: center;
-  padding-top: 5rem;
+  padding: 1.5rem 3rem;
   z-index: 1;
 }
 
+main > section:nth-of-type(2) > ul li > article > h3{
+  text-align: center;
+  margin-top: 0rem;
+  font-size: 1.5rem;
+}
 
+main > section:nth-of-type(2) > ul li > article > h4{
+  margin-top: 1.5rem;
+}
+
+main > section:nth-of-type(2) > ul li > article > p{
+  text-align: left;
+  max-width: 37rem;
+  margin: 0;
+}
+
+main > section:nth-of-type(2) > ul li > article > a{
+  display: block;
+  padding: .5rem .7rem;
+  margin: 2rem 1.5rem 2rem 0;
+  text-align: center;
+
+  background-color: var(--blauwe-kleur);
+  color: var(--lettertype-kleur1);
+  border-radius: 5rem;
+  border: none;
+  width: 11.5rem;
+  font-size: .9rem;
+}
+
+/* Arrow design */
 main> div{
   width: 0;
   height: 0;
@@ -375,9 +402,11 @@ main section:nth-of-type(3){
   padding: 5rem 10% 5rem 10%;
   margin: 0;
   background-color: var(--achtergrondkleur1);
+  height: 75vh;
 }
 
-main > section:nth-of-type(3) > div{ /* dotted grid */
+/* dotted grid */
+main > section:nth-of-type(3) > div{ 
   left: .5rem;
 }
 
@@ -418,6 +447,4 @@ footer{
 
 .toonOverlay{
   display: block !important;
-}
-
-
+} 
