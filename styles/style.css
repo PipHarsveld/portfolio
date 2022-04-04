@@ -160,6 +160,10 @@ header section section nav{
   box-shadow: none;
 }
 
+header section section nav:nth-of-type(2){
+  display: none;
+}
+
 header section section nav a:first-of-type{
   display: inline-block;
   padding: 1rem 2rem;
@@ -300,6 +304,7 @@ main section:nth-of-type(2) ul li{
   display: flex;
   justify-content: center;
   align-self: center;
+  cursor: pointer;
 }
 
 main section:nth-of-type(2) ul li:first-of-type{
@@ -491,3 +496,47 @@ footer{
 .toonOverlay{
   display: block !important;
 } 
+
+
+
+
+
+/**************/
+/* RESPONSIVE */
+/**************/
+@media(max-width: 71.9rem){ /* 1150px*/
+  header section section nav{
+    display: flex;
+  }
+
+  header section section nav:first-of-type{
+    display: none;
+  }
+
+  header section section nav:nth-of-type(2){
+    display: block;
+  }
+
+  main > section:first-of-type{
+    padding: 9% 10% 9% 10%;
+  }
+}
+
+@media(max-width: 70rem){ /* 1120px*/
+  header > section > section > h1{
+    font-size: 2.5rem;
+  }
+
+  main section:nth-of-type(2) ul{
+    grid-row-gap: 0rem;
+  }
+
+  main > section:first-of-type > section{
+    min-width: 55%;
+  }
+
+  main > section:first-of-type > aside > img {
+    margin-right: 8rem;
+}
+
+}
